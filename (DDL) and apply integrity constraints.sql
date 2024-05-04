@@ -19,3 +19,6 @@ INSERT INTO Doctor (doctor_id,name,specialization) VALUES
 (3, 'Light Yagami', 'Cardiologist'),
 (1, 'Kiyotaka Ayanokoji', 'Neurosergon'),
 (2, 'Johan Liebert', 'Psychologist');
+
+select * from Patient;
+select * from Doctor;
