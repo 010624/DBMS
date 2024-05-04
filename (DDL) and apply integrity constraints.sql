@@ -14,3 +14,8 @@ CREATE TABLE Doctor (
 
 INSERT INTO Patient (patient_id, name, age, gender, address)
 VALUES (1, 'John Doe', 35, 'Male', '123 Main St');
+
+INSERT INTO Doctor (doctor_id,name,specialization) VALUES
+(3, 'Light Yagami', 'Cardiologist'),
+(1, 'Kiyotaka Ayanokoji', 'Neurosergon'),
+(2, 'Johan Liebert', 'Psychologist');
