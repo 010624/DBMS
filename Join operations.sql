@@ -27,26 +27,24 @@ select * from Doctor;
 
 -- Inner Join:
 
-SELECT Doctor.Name
-FROM Doctor
-INNER JOIN Patient ON Doctor.doctor_id = Patient.doctor_id;
+SELECT Patient.name AS patient_name, Doctor.name AS doctor_name, Doctor.specialization
+FROM Patient
+INNER JOIN Doctor ON Patient.doctor_id = Doctor.doctor_id;
 
 -- Left Join:
 
-
-SELECT Doctor.Name
-FROM Doctor
-LEFT JOIN Patient ON Doctor.doctor_id = Patient.doctor_id;
+SELECT Patient.name AS patient_name, Doctor.name AS doctor_name, Doctor.specialization
+FROM Patient
+LEFT JOIN Doctor ON Patient.doctor_id = Doctor.doctor_id;
 
 -- Right Join:
 
-SELECT Doctor.Name
-FROM Doctor
-Right JOIN Patient ON Doctor.doctor_id = Patient.doctor_id;
+SELECT Patient.name AS patient_name, Doctor.name AS doctor_name, Doctor.specialization
+FROM Patient
+RIGHT JOIN Doctor ON Patient.doctor_id = Doctor.doctor_id;
 
 -- Full Outer Join:
 
-SELECT Doctor.Name
-FROM Doctor
-FULL OUTER JOIN Patient ON Doctor.doctor_id = Patient.doctor_id;
-
+SELECT Patient.name AS patient_name, Doctor.name AS doctor_name, Doctor.specialization
+FROM Patient
+FULL JOIN Doctor ON Patient.doctor_id = Doctor.doctor_id;
