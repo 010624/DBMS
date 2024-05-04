@@ -3,7 +3,7 @@ CREATE TABLE Patient (
     name VARCHAR(100) NOT NULL,
     age INT,
     gender VARCHAR(10),
-    address VARCHAR(255)
+    doctor_id INT
 );
 
 CREATE TABLE Doctor (
@@ -12,8 +12,10 @@ CREATE TABLE Doctor (
     specialization VARCHAR(100)
 );
 
-INSERT INTO Patient (patient_id, name, age, gender, address)
-VALUES (1, 'John Doe', 35, 'Male', '123 Main St');
+INSERT INTO Patient (patient_id, name, age, gender, doctor_id) VALUES 
+(1, 'John Doe', 35, 'Male', '1'),
+(2, 'Yuuichi Katagiri', 20, 'Male', '2'),
+(3, 'Yumeko Jabami', 20, 'Female', '3');
 
 INSERT INTO Doctor (doctor_id,name,specialization) VALUES
 (3, 'Light Yagami', 'Cardiologist'),
@@ -22,3 +24,10 @@ INSERT INTO Doctor (doctor_id,name,specialization) VALUES
 
 select * from Patient;
 select * from Doctor;
+
+ALTER TABLE Patient ADD CONSTRAINT Check_gender CHECK ( gender IN
+('Male', 'Female'));
+
+ALTER TABLE Patient ADD CONSTRAINT Check_doctor CHECK ( doctor_id IN
+('1', '2', '3'));
+
