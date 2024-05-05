@@ -112,7 +112,7 @@ INSERT INTO students VALUES
 ('vedant', 'civil', '2020-10-04', 67),  
 ('janvi', 'it', '2020-10-04', 51); 
 select*from students;
--- DELIMITER //
+-- DELIMITER // procedure and functions 
 Create Trigger before_insert_empworkinghours BEFORE INSERT ON students FOR EACH ROW 
 BEGIN IF NEW.attendance < 0 THEN SET NEW.attendance = 0;  
 END IF;  
