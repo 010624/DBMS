@@ -1,0 +1,36 @@
+creating the table-     create table student(name char(40),id int primary key,city char(50),marks integer );
+
+displaying the description of the table-     desc student;
+
+deleting the table-     drop table student;
+
+inserting the multiple values-    insert into student values ('Jagrut',1,'Pimpri-Chinchwad',90),('A',2,'Pune',80),('B',2,'Aundh',50),('C',3,'Aundh',80);
+
+displaying the entire table-    select * from student;
+
+displaying the specific table content like a column-    select * from student where id=1;
+
+deleting the row from the table-    delete from student where city='Aundh';
+
+updating the column content of the table-    update student set marks='50' where id=3;
+
+adding the extra column to table-     alter table student add age int;
+
+deleting the column from the existing table-    alter table student drop column age;
+
+changing the column type information of table-    alter table student modify column city varchar(80);
+
+arranging the column information in descending order-     select * from student order by id desc;
+
+arranging the column information in ascending order-      select * from student order by marks;
+
+displaying the characters which start with some letter-     select * from student  where name like 'j%';
+
+displaying the characters which end with some letter-     select * from student  where name like '%t';
+
+displaying the characters which has second letter as "a" with some letter-     select * from student  where name like '_a%';
+
+   --Aggregate function- sum, count, avg, min, max;
+calculating the average of marks from the given table-     select avg(salary) from student;   
+
+calculating the sum of marks from the given table-     select sum(salary) from student;
