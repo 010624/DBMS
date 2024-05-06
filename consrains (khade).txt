@@ -1,0 +1,22 @@
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    email VARCHAR(50) UNIQUE,
+    phone VARCHAR(15)
+);
+--primary
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    product_id INT,
+    quantity INT,
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+--foreign
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    email VARCHAR(50) UNIQUE,
+    phone VARCHAR(15)
+);
+--unique
+
